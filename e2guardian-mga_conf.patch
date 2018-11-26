@@ -1,0 +1,53 @@
+diff -Nru a/configs/contentscanners/clamdscan.conf.in b/configs/contentscanners/clamdscan.conf.in
+--- a/configs/contentscanners/clamdscan.conf.in	2018-07-17 08:45:15.000000000 +0200
++++ b/configs/contentscanners/clamdscan.conf.in	2018-08-18 15:49:08.236133474 +0200
+@@ -1,7 +1,7 @@
+ plugname = 'clamdscan'
+ 
+ # edit this to match the location of your ClamD UNIX domain socket
+-#clamdudsfile = '/var/run/clamav/clamd.sock'
++clamdudsfile = '@localstatedir@/clamav/clamd.socket'
+ 
+ # If this string is set, the text it contains shall be removed from the
+ # beginning of filenames when passing them to ClamD.
+diff -Nru a/configs/e2guardian.conf.in b/configs/e2guardian.conf.in
+--- a/configs/e2guardian.conf.in	2018-07-17 08:45:15.000000000 +0200
++++ b/configs/e2guardian.conf.in	2018-08-18 15:52:20.709120485 +0200
+@@ -105,7 +105,7 @@
+ # Log file location
+ # 
+ # Defines the log directory and filename.
+-#loglocation = '@DGLOGLOCATION@/access.log'
++loglocation = '@DGLOGLOCATION@/access.log'
+ 
+ # Dymamic statistics log file location
+ #
+@@ -408,7 +408,7 @@
+ # File cache dir
+ # Where DG will download files to be scanned if too large for the
+ # RAM cache.
+-filecachedir = '/tmp'
++filecachedir = '@localstatedir@/e2guardian/tmp'
+ 
+ # Delete file cache after user completes download
+ # When a file gets save to temp it stays there until it is deleted.
+@@ -566,7 +566,7 @@
+ # PID filename
+ # 
+ # Defines process id directory and filename.
+-#pidfilename = '@DGPIDDIR@/e2guardian.pid'
++pidfilename = '@DGPIDDIR@/e2guardian.pid'
+ 
+ # Disable daemoning
+ # If enabled the process will not fork into the background.
+@@ -593,8 +593,8 @@
+ # Temp files created during virus scanning are given owner and group read
+ 
+ # clamdscan, the two processes must run with either the same group or user ID.
+-#daemonuser = '@DGPROXYUSER@'
+-#daemongroup = '@DGPROXYGROUP@'
++daemonuser = '@DGPROXYUSER@'
++daemongroup = '@DGPROXYGROUP@'
+ 
+ 
+ # Mail program

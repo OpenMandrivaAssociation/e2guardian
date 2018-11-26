@@ -1,0 +1,11 @@
+[Unit]
+Description=E2guardian Web Content Filter
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/run/e2guardian.pid
+ExecStart=/usr/sbin/e2guardian
+
+[Install]
+WantedBy=multi-user.target
