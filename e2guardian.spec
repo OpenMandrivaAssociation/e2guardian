@@ -1,5 +1,5 @@
 Name:		e2guardian
-Version:	5.2.2
+Version:	5.3.2
 Release:	%mkrel 1
 Summary:	Open Source web content filter
 License:	GPLv2+
