@@ -1,6 +1,6 @@
-diff -Nru a/configs/contentscanners/clamdscan.conf.in b/configs/contentscanners/clamdscan.conf.in
---- a/configs/contentscanners/clamdscan.conf.in	2018-07-17 08:45:15.000000000 +0200
-+++ b/configs/contentscanners/clamdscan.conf.in	2018-08-18 15:49:08.236133474 +0200
+diff -Nrup a/configs/contentscanners/clamdscan.conf.in b/configs/contentscanners/clamdscan.conf.in
+--- a/configs/contentscanners/clamdscan.conf.in	2020-01-27 09:24:39.000000000 +0100
++++ b/configs/contentscanners/clamdscan.conf.in	2020-02-17 07:27:19.907944906 +0100
 @@ -1,7 +1,7 @@
  plugname = 'clamdscan'
  
@@ -10,19 +10,19 @@ diff -Nru a/configs/contentscanners/clamdscan.conf.in b/configs/contentscanners/
  
  # If this string is set, the text it contains shall be removed from the
  # beginning of filenames when passing them to ClamD.
-diff -Nru a/configs/e2guardian.conf.in b/configs/e2guardian.conf.in
---- a/configs/e2guardian.conf.in	2018-07-17 08:45:15.000000000 +0200
-+++ b/configs/e2guardian.conf.in	2018-08-18 15:52:20.709120485 +0200
-@@ -105,7 +105,7 @@
+diff -Nrup a/configs/e2guardian.conf.in b/configs/e2guardian.conf.in
+--- a/configs/e2guardian.conf.in	2020-01-27 09:24:39.000000000 +0100
++++ b/configs/e2guardian.conf.in	2020-02-17 07:28:58.854768662 +0100
+@@ -105,7 +105,7 @@ logfileformat = 6
  # Log file location
  # 
  # Defines the log directory and filename.
 -#loglocation = '@DGLOGLOCATION@/access.log'
 +loglocation = '@DGLOGLOCATION@/access.log'
  
- # Dymamic statistics log file location
- #
-@@ -408,7 +408,7 @@
+ # Defines optional request log path
+ # This is for useful for debug purposes to log all requests before processing or setting filter group
+@@ -425,7 +425,7 @@ maxcontentfilecachescansize = 20000
  # File cache dir
  # Where DG will download files to be scanned if too large for the
  # RAM cache.
@@ -31,7 +31,7 @@ diff -Nru a/configs/e2guardian.conf.in b/configs/e2guardian.conf.in
  
  # Delete file cache after user completes download
  # When a file gets save to temp it stays there until it is deleted.
-@@ -566,7 +566,7 @@
+@@ -587,7 +587,7 @@ httpworkers = 500
  # PID filename
  # 
  # Defines process id directory and filename.
@@ -40,7 +40,7 @@ diff -Nru a/configs/e2guardian.conf.in b/configs/e2guardian.conf.in
  
  # Disable daemoning
  # If enabled the process will not fork into the background.
-@@ -593,8 +593,8 @@
+@@ -614,8 +614,8 @@ loguseragent = off
  # Temp files created during virus scanning are given owner and group read
  
  # clamdscan, the two processes must run with either the same group or user ID.
