@@ -1,6 +1,6 @@
 Name:		e2guardian
 Version:	5.3.4
-Release:	2
+Release:	3
 Summary:	Open Source web content filter
 License:	GPLv2+
 Group:		System/Servers
