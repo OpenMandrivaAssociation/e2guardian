@@ -4,7 +4,7 @@ Release:	3
 Summary:	Open Source web content filter
 License:	GPLv2+
 Group:		System/Servers
-URL:		http://e2guardian.org/cms/
+URL:		https://e2guardian.org/cms/
 Source0:	https://github.com/e2guardian/e2guardian/archive/v%{version}/%{name}-%{version}.tar.gz
 Source1:	e2guardian.service
 Patch0:		e2guardian-mga_conf.patch
