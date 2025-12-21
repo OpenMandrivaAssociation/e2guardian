@@ -8,6 +8,11 @@ URL:		https://e2guardian.org/cms/
 Source0:	https://github.com/e2guardian/e2guardian/archive/v%{version}/%{name}-%{version}.tar.gz
 Source1:	e2guardian.service
 Patch0:		e2guardian-mga_conf.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libpcreposix)
 BuildRequires:	pkgconfig(openssl)
