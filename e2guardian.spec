@@ -1,13 +1,13 @@
 Name:		e2guardian
-Version:	5.3.4
-Release:	4
+Version:	5.5.9r
+Release:	1
 Summary:	Open Source web content filter
 License:	GPLv2+
 Group:		System/Servers
 URL:		https://e2guardian.org/cms/
 Source0:	https://github.com/e2guardian/e2guardian/archive/v%{version}/%{name}-%{version}.tar.gz
 Source1:	e2guardian.service
-Patch0:		e2guardian-mga_conf.patch
+# dropped (no longer applies): Patch0:		e2guardian-mga_conf.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool-base
